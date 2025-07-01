@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF8thKeK31kviT2Hs5f9Wxf3LdX5RL0e3oww&s') no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #db1414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background: rgba(244, 244, 244, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    width: 420px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(233, 227, 227, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px 0 30px;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 5px;
+    width: 0%;
+    background: #d55656;
+    transform: translateY(-50%);
+    transition: width 0.4s ease;
+    z-index: 0;
+}
+
+.step {
+    width: 35px;
+    height: 35px;
+    background: #555;
+    border-radius: 50%;
+    z-index: 1;
+    color: #fff;
+    line-height: 35px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.step.active {
+    background: #eb0808;
+    color: #000;
+}
+
+.question-box {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.option-btn {
+    background: #704b4b;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.option-btn:hover {
+    transform: translatey(-5px);
+    background-color: #fcfcfc;
+    color: #fff5f5;
+}
+
+.option-btn.correct {
+    background-color: rgb(239, 19, 19);
+    color: #fff;
+}
+
+.option-btn.wrong {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+.feedback {
+    font-weight: bold;
+    height: 24px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background: #ff0000;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:disabled {
+    background: #fffcfc;
+    color: #333;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background: #dfd3d3;
+    color: #000;
+}

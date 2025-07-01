@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Step Progress Bar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>🚀 Step Progress Bar</h1>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+      <div class="step active">1</div>
+      <div class="step">2</div>
+      <div class="step">3</div>
+      <div class="step">4</div>
+      <div class="step">5</div>
+    </div>
+
+    <div class="question-box" id="question-box">
+      <!-- Question appears here -->
+    </div>
+
+    <div class="options" id="options-box">
+      <!-- Answer options appear here -->
+    </div>
+
+    <div class="feedback" id="feedback"></div>
+
+    <div class="nav-buttons">
+      <button id="prev" disabled>👈🏻 Previous</button>
+      <button id="next">Next 👉🏻</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
